@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+}
+.topContainer{
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    background-color: #cccccc;
+    padding: 25px;
+   }
+
+
+.navBar{
+    align-items: end;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: #cccccc;
+}
+
+.navLink{
+    color: white;
+    font-family: 'Bad Script', cursive;
+    font-size: 1rem;
+}
+.sectionHeader{
+    width: 100vw;
+    padding-left: 20px;
+    text-align: start;
+   
+}
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    height: 200px;
+    background-color: #3e5063;
+}
+.shopBioDiv{
+    border: solid red 1px;
+
+   padding: 20px 10vw 20px 10vw;
+}

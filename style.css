@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to bottom right, #3e5063,#633E62, #63513E, #3E633F);
+    font-family: 'Poppins', sans-serif;
+
+
+   text-align: center;
+    color:white;
+  width: 100vw;
+    
+}
+h1,h2,h3,h4,button{
+    font-family: 'Bad Script', cursive;
+}
+
+
+.navBar{
+    background-color:rgba(99, 81, 62, 0.5);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.navLink{
+    color: white;
+    font-family: 'Bad Script', cursive;
+    font-size: 24px;
+}
+.sectionHeader{
+    width: 100vw;
+    padding-left: 20px;
+    text-align: start;
+   
+}
+
+.bioTxt{
+    text-align: center;
+    margin: 30px;
+  
+  
+    
+}
+.shopBioDiv{
+    background-color:#3e5063;
+   padding: 20px;
+}
+
+.hours{
+    font-size: 15px;
+}
+.contactInfoDiv{
+    color: white;
+    font-weight: 500;
+    background-color:#3e5063;
+    padding: 20px;
+    text-align: start;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+img{
+    border-radius: 25px;
+  
+    padding: 20px;
+}
+.stylist{
+    display: grid;
+    grid-template-columns: .1fr .1fr .4fr 1fr;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+.stylistImg{
+    width: 400px;
+}
+.stylistsContainer{
+    padding: 15px;
+   background-color:white;
+   color: black;
+  
+}
+
+
+.stylistNameTxt{
+    text-align: center;
+    
+}
+.stylist{
+    border-bottom: black 2px solid;
+   
+}
+button{
+    height: 40px;
+    width: 100px;
+    background-color: #3E3E63;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: 25px;
+    color: white;
+
+}
+button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.reviews{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.policies{
+    text-align: left;
+    padding: 0px 40px 0px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.socialLink:hover{
+cursor: pointer;
+transform: scale(1.2);
+}
+#shopPhotos{
+    background-color:rgba(99, 81, 62, 0.5);
+    display: flex;
+ 
+   justify-content: center;
+    padding: 20px;
+    height: 200px;
+}
+
+#storeFrontPic{
+    grid-column: 1/2;
+}
+
+.navLink:hover{
+   
+    cursor: pointer;
+    transform: scale(1.2);
+}
+@media screen and (max-width: 1000px) {
+    .topContainer{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        
+    }
+    .chromaLogo{
+        max-width: 800px;
+    }
+   .stylist{
+    display: flex;
+    flex-direction: column;
+    
+   }
+   .stylistContact{
+    display: flex;
+    justify-content: space-around;
+    
+    width: 80vw;
+    align-items: center;
+    padding: 20px;
+   }
+  }
