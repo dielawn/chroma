@@ -8,17 +8,26 @@
     --grayColor:  rgb(0, 0, 0, 0.5);
     --blueColor: #3e5063;
 }
-a:link{
+a:link.whiteTxt{
     text-decoration: none;
     color: white;
+    
 }
-a:link, a:visited {
-   
-    text-decoration: none;
-   color: white;
-  }
- a:visited .blkTxt{
+a:link.blkTxt{
     color: black;
+    text-decoration: none;
+}
+a:visited.whiteTxt{
+    color: white;
+}
+a:link, a:visited.whiteTxt{
+   color: white;
+    text-decoration: none;
+  
+  }
+ a:visited.blkTxt{
+    color: black;
+    text-decoration: none;
   }
 body{
     width: 100vw;
