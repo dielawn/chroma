@@ -27,27 +27,48 @@ for(let i = 0; i < bookBtns.length; i++){
             case 'jackieEppersonContactBtn':
                 window.location.href = 'mailto:notsure@gmail.com';
                 console.log('jackie')
-                break;
+            break;
+            case 'maryCroswellContactBtn':
+                window.location.href = 'mailto:notsure@gmail.com'
+                console.log('mary')
+            break;
+            case 'elizabethJacobsonContactBtn':
+                window.location.href = 'mailto:notsure@gmail.com'
+                console.log('elizabeth')
+            break;
+            case 'stevieCondonContactBtn':
+                window.location.href = 'mailto:notsure@gmail.com'
+                console.log('stevie jo')
+            break;
+            case 'ashleyShinContactBtn':
+                window.location.href = 'mailto:notsure@gmail.com'
+                console.log('ashley')
+            break;
+            case 'crystalCorallesContactBtn':
+                window.location.href = 'mailto:notsure@gmail.com'
+                console.log('crystal')
+            break;
+            case 'brendPaigeContactBtn':
+                window.location.href = 'mailto:notsure@gmail.com'
+                console.log('brenda')
+            break;
+            case 'gabiTorgersonContactBtn':
+                window.location.href = 'mailto:notsure@gmail.com'
+                console.log('gabi')
+            break;
+            case 'sarahLeonardContactBtn':
+                window.location.href = 'mailto:notsure@gmail.com'
+                console.log('sarah')
+            break;
+            case 'michelleStanzelContactBtn':
+                window.location.href = 'mailto:notsure@gmail.com'
+                console.log('michelle')
+            break;
         }
 
         
     })
 }
-const closeForm = () => {
-    emailForm.style.display = 'none'
-}
 
-document.addEventListener('click', (e) =>{
-    console.log(e.target)
-let currentStylistBtn = e.target.id
-let currentStylist = document.getElementById(currentStylistBtn)
-console.log(currentStylist.id)
-    switch(currentStylist.id){
-        case cynthiaContactBtn:
-            emailForm.action = 'mailto:CynthiaO.Hairmakup@gmail.com'
-            emailForm.style.display = 'block'
-            break;
-    }
-   
-    
-})
+
+
