@@ -3,46 +3,261 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --mainFont: 'Poppins', sans-serif;
+    --grayColor:  rgb(0, 0, 0, 0.5);
+    --blueColor: #3e5063;
+}
+a:link{
+    text-decoration: none;
+    color: white;
+}
+a:link, a:visited {
+   
+    text-decoration: none;
+   color: white;
+  }
 body{
     width: 100vw;
+    font-family: var(--mainFont);
 }
+
 .topContainer{
-    display: flex;
-    justify-content: center;
-    height: 20vh;
-    background-color: #cccccc;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   align-content: center;
+ justify-content: center;
+    background-color:var(--blueColor);
     padding: 25px;
+    color: white;
+
+
    }
+.chromaLogoImg{
 
-
+  max-width: 400px;
+} 
+.contactInfoDiv{
+    text-align: center;
+}
+.contact{
+    text-align: center;
+}
+.imageDiv{
+    text-align: center;
+}
+.hours{
+    font-size: .9rem;
+}
+.phone{
+position: relative;
+}
 .navBar{
-    align-items: end;
+    background-color:var(--blueColor);
     display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    background-color: #cccccc;
+    justify-content: center; 
+    color: white;
 }
 
 .navLink{
-    color: white;
-    font-family: 'Bad Script', cursive;
+    
     font-size: 1rem;
+    padding: 10px;
 }
-.sectionHeader{
-    width: 100vw;
-    padding-left: 20px;
-    text-align: start;
-   
+.navLink:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
 }
+.stylistDivs{
+    
+}
+
 .container{
     display: flex;
     justify-content: center;
     padding: 20px;
+    overflow: hidden;
     height: 200px;
-    background-color: #3e5063;
+   
+    
 }
-.shopBioDiv{
-    border: solid red 1px;
+.description{
+    
 
    padding: 20px 10vw 20px 10vw;
 }
+.socialLink{
+   height: 20px;
+    margin: 1px;
+}
+.stylist{
+   
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-evenly;
+    font-size: 1rem;
+    border-bottom: black 2px solid;
+}
+.stylistImg{
+    max-width: 375px;
+    overflow: hidden;
+    max-height: 215.73px;
+}
+.stylistsContainer{
+    padding: 15px;
+   background-color:white;
+   color: black;
+   text-align: center;
+   
+  
+}
+
+.stylistContact{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 10px;
+   height: 140px;
+   justify-content: space-around;
+ 
+
+}
+li{
+    list-style: none;
+}
+.stylistListDiv{
+    display: block;
+    position: absolute;
+    background-color: var(--blueColor);
+    padding: 10px;
+}
+
+.bioTxt{
+    text-align: center;
+    margin: 30px;
+  max-width: 50vw;
+  
+    
+}
+.contactBtn{
+   border: none;
+   outline: solid black 2px;
+height: 25px;
+   background-color: white;
+   font-size: .8rem;
+   color: black;
+   font-weight: 800;
+   font-family: var(--mainFont);
+  padding: 5px;
+  }
+.contactBtn:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.contactLinks{
+    
+    width: 200px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ .policies{
+     text-align: left;
+     padding: 0px 40px 0px 40px;
+     margin: 30px;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+    
+     height: fit-content;
+ }
+ .gallery{
+    display: flex;
+    flex-direction: column;
+    
+    
+ }
+ .reviews{
+    
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+
+ }
+ .review-logos{
+    max-width: 120px;
+    padding: 10px;
+ }
+ .galleryPhotoDiv{
+    display: flex;
+    overflow: hidden;
+ }
+.products{
+    text-align: center;
+    margin: 30px;  
+  display: flex;
+  justify-content: space-around;
+ 
+}
+.productLogo{
+    height: 100px;
+}
+.footer{
+   display: flex;
+   justify-content: space-around;
+}
+
+.topBtn{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    position: fixed;
+    background-color: var(--blueColor);
+    color: black;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+  right: 30px;
+}
+@media screen and (max-width: 800px) {
+
+
+.address{
+    display: none;
+}
+.stylist{
+    display: flex;
+    flex-direction: column;
+    
+   }
+   .stylistContact{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 80vw;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+   }
+ .topContainer{
+    display: flex;
+    flex-direction: column;
+ }
+};
