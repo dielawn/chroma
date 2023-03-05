@@ -172,7 +172,6 @@ height: 25px;
 }
 .contactLinks{
     
-    width: 200px;
     display: flex;
     align-content: center;
     align-items: center;
@@ -181,9 +180,12 @@ height: 25px;
 }
 .reviews{
     display: flex;
-    flex-direction: column;
+    padding: 10px;  
     align-items: center;
+    justify-content: center;
+    align-content: center; 
  }
+
  .policies{
      text-align: left;
      padding: 0px 40px 0px 40px;
@@ -200,18 +202,15 @@ height: 25px;
     
     
  }
- .reviews{
-    
-    height: fit-content;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    
 
- }
  .review-logos{
-    max-width: 120px;
+    max-width:200px;
     padding: 10px;
+ }
+ .yelp-review{
+    padding: 7px;
+    margin: 10px;
+    max-width: 500px;
  }
  .galleryPhotoDiv{
     display: flex;
@@ -278,6 +277,16 @@ height: 25px;
  }
  .bioTxt{
     margin: 20px;
-    max-width: 66%;
+    max-width: 70vw;
+    text-align: left;
+ }
+ .reviews{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;  
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: fit-content; 
  }
 };
