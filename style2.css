@@ -41,6 +41,8 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
    align-content: center;
  justify-content: center;
+ align-items: center;
+ text-align: center;
     background-color:var(--blueColor);
     padding: 25px;
     color: white;
@@ -101,7 +103,7 @@ position: relative;
 }
 .socialLink{
    height: 20px;
-    margin: 1px;
+    margin: 10px;
 }
 .stylist{
    
@@ -164,6 +166,7 @@ height: 25px;
    font-weight: 800;
    font-family: var(--mainFont);
   padding: 5px;
+  margin-left: 10px;
   }
 .contactBtn:hover{
     background-color: black;
@@ -171,11 +174,11 @@ height: 25px;
     cursor: pointer;
 }
 .contactLinks{
-    
+    width: 400px;
     display: flex;
     align-content: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     
 }
 .reviews{
@@ -234,7 +237,9 @@ height: 25px;
    display: flex;
    justify-content: space-around;
 }
-
+.black{
+    color: black;
+}
 .topBtn{
     border-radius: 50%;
     width: 50px;
