@@ -315,6 +315,7 @@ height: 25px;
     height: 100px;
 }
 .footer{
+    margin: 15px;
    display: flex;
    justify-content: space-around;
 }

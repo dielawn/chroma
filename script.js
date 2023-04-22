@@ -5,7 +5,7 @@ const stylist = [
     facebook: '', 
     instagram: 'https://www.instagram.com/lindsayrider13/', 
     email: 'msrae13@gmail.com', 
-    website: 'https://www.chromasalontacoma.com/', 
+    website: '', 
     image: 'images/lindsay-ryder2.jpg', 
     bio: "The talented owner, stylist, and certified balayage artist at Chroma Salon. With over two decades of experience in the industry, Lindsay is a true expert in her field and has a deep passion for helping her clients feel their absolute best. As a leader at Chroma, she takes great pride in providing exceptional service and creating a warm, welcoming atmosphere for all who enter her salon. As a certified L'Oreal Professionnel Balayage artist, Lindsay is known for her impeccable attention to detail and skillful techniques, making her one of the best in the industry. Whether you're looking for a subtle sun-kissed look or a bold, statement-making style, Lindsay will work with you to achieve your desired result. Be sure to ask about her balayage specials - you won't want to miss out on the opportunity to experience her artistry firsthand. So why wait? Visit Chroma Salon today and let Lindsay and her team help you look and feel your best!"
     },
@@ -56,7 +56,7 @@ const stylist = [
 
     {name: 'Stevie Jo Condon', 
     title: 'Stylist', 
-    phone: '', 
+    phone: '2538206368', 
     facebook: '', 
     instagram: 'https://www.instagram.com/styledbysteviejo/', 
     email: '', 
@@ -106,10 +106,10 @@ const stylist = [
     },
     {name: 'Sarah Leonard', 
     title: 'Stylist', 
-    phone: '', 
+    phone: '2536869626', 
     facebook: '', 
     instagram: 'https://www.instagram.com/sarahruns_with_scissors/', 
-    email: '', 
+    email: 'Rockstarhair425@gmail.com', 
     website: '', 
     image: 'images/sarahLeonard.jpg', 
     bio: "Sarah brings over 20 years of experience as a hairstylist to Chroma Salon, and she's a true Tacoma native with a passion for creating beautiful, personalized looks for her clients. Sarah's focus on cutting has led her to specialize in short hair styles, including bobs, pixies, and men's haircuts. Her expertise in these areas is unparalleled, and she loves the opportunity to create bold, edgy looks for her clients. Sarah is also skilled in a range of hair coloring techniques, including foiling, foilyage, and other popular services. Her attention to detail and commitment to quality make her a sought-after stylist at Chroma Salon, and her clients appreciate her friendly, approachable demeanor and her ability to bring their vision to life. Whether you're looking for a dramatic change or a subtle update, Sarah has the skills and expertise to create the perfect look for you."
@@ -120,7 +120,7 @@ const stylist = [
     facebook: '', 
     instagram: '', 
     email: 'michelle_stanzel@yahoo.com', 
-    website: 'http://raylesstan.com/', 
+    website: 'http://raylesstan.com', 
     image: 'images/michelleStanzel.jpg', 
     bio: "Michelle is a true expert when it comes to airbrush tanning, with over 20 years of experience in the industry. As one of the only custom airbrush tanning artists in the Tacoma area, Michelle has developed a loyal following of clients who appreciate her skill, precision, and attention to detail. Michelle has been an integral part of Chroma Salon since it opened its doors in May 2010, and she loves the opportunity to work alongside her amazing coworkers and serve her clients every day. Michelle's passion for airbrush tanning is evident in everything she does, and she takes great pride in helping her clients achieve the perfect, natural-looking glow they desire. Whether you're getting ready for a special occasion or just want to feel confident and beautiful, Michelle is the go-to expert for all your airbrush tanning needs at Chroma Salon."
     },
@@ -156,43 +156,43 @@ for(let i = 0; i < bookBtns.length; i++){
                 console.log('lindsay')
             break;
             case 'jackieEppersonContactBtn':
-                window.location.href = 'mailto:notsure@gmail.com';
+                window.location.href = 'mailto:';
                 console.log('jackie')
             break;
             case 'maryCroswellContactBtn':
-                window.location.href = 'mailto:notsure@gmail.com'
+                window.location.href = 'mailto:'
                 console.log('mary')
             break;
             case 'elizabethJacobsonContactBtn':
-                window.location.href = 'mailto:notsure@gmail.com'
+                window.location.href = 'mailto:'
                 console.log('elizabeth')
             break;
             case 'stevieCondonContactBtn':
-                window.location.href = 'mailto:notsure@gmail.com'
+                window.location.href = 'mailto:'
                 console.log('stevie jo')
             break;
             case 'ashleyShinContactBtn':
-                window.location.href = 'mailto:notsure@gmail.com'
+                window.location.href = 'mailto:'
                 console.log('ashley')
             break;
             case 'crystalCorallesContactBtn':
-                window.location.href = 'mailto:notsure@gmail.com'
+                window.location.href = 'mailto:'
                 console.log('crystal')
             break;
             case 'brendPaigeContactBtn':
-                window.location.href = 'mailto:notsure@gmail.com'
+                window.location.href = 'mailto:'
                 console.log('brenda')
             break;
             case 'gabiTorgersonContactBtn':
-                window.location.href = 'mailto:notsure@gmail.com'
+                window.location.href = 'mailto:'
                 console.log('gabi')
             break;
             case 'sarahLeonardContactBtn':
-                window.location.href = 'mailto:notsure@gmail.com'
+                window.location.href = 'mailto:Rockstarhair425@gmail.com'
                 console.log('sarah')
             break;
             case 'michelleStanzelContactBtn':
-                window.location.href = 'mailto:notsure@gmail.com'
+                window.location.href = 'mailto:michelle_stanzel@yahoo.com'
                 console.log('michelle')
             break;
         }
@@ -227,8 +227,13 @@ for(let i = 0; i < list.length; i++){
     card.appendChild(title)
 //phone
     let phone = document.createElement('a')
-    phone.classList.add('phone blackTxt')
-    phone.innerText = list[i].phone
+    phone.classList.add('phone', 'blkTxt')
+    let phoneNumber = list[i].phone
+    displayedNumber = 
+        phoneNumber.slice(0, 3) + '-' + 
+        phoneNumber.slice(3, 6) + '-' + 
+        phoneNumber.slice(6)
+    phone.innerText = displayedNumber
     phone.href = `tel:${list[i].phone}`
     card.appendChild(phone)
 //bio
@@ -236,7 +241,6 @@ for(let i = 0; i < list.length; i++){
     bio.classList.add('bio')
     bio.innerText = list[i].bio
     card.appendChild(bio)
-
 //links
     if(list[i].facebook != ''){
         let linkFacebook = document.createElement('a')
@@ -255,16 +259,17 @@ for(let i = 0; i < list.length; i++){
     if(list[i].website != ''){
         let linkWebsite = document.createElement('a')
         linkWebsite.classList.add('link')
+   
         linkWebsite.innerText = list[i].website
         linkWebsite.href = list[i].website
         card.appendChild(linkWebsite)
     }
-    //email
+//email
     if(list[i].email != ''){
-    let email = document.createElement('button')
-    email.classList.add('emailBtn')
-    email.innerText = 'Email'
-    email.href = `mailto:${list[i].email}`
+        let email = document.createElement('button')
+        email.classList.add('emailBtn')
+        email.innerText = 'Email'
+        email.href = `mailto:${list[i].email}`
     card.appendChild(email)
     }
 }
@@ -283,13 +288,10 @@ const showDivs = (n) => {
     let mySlides = document.getElementsByClassName('shopImg');
     let slidesToShow = Math.floor(window.innerWidth / 229);
     let startIndex = (slideIndex - 1) % mySlides.length;
-    let endIndex = startIndex + slidesToShow;
-    
+    let endIndex = startIndex + slidesToShow;    
     if (startIndex === 0 && endIndex > mySlides.length) {
         endIndex = mySlides.length;
-    }
-    
-    // console.log(slideIndex, endIndex, startIndex)
+    }    
     if (endIndex > mySlides.length) {
         endIndex = mySlides.length;
         startIndex = endIndex - slidesToShow;
@@ -308,10 +310,5 @@ const showDivs = (n) => {
     }
     setTimeout(() => {plusDivs(1)}, 2500); // Change image every 2 seconds
 }
-
-
-
-
-
 
 showDivs(slideIndex);
