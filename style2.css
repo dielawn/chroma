@@ -29,12 +29,41 @@ a:link, a:visited.whiteTxt{
     color: black;
     text-decoration: none;
   }
+
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
 body{
     width: 100vw;
     font-family: var(--mainFont);
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.whiteTxt{
+    color: white;
+}
+.blkTxt{
+    color: black;
 }
 .sectionHeader{
     padding-left: 20px;
+    width: 100%;
 }
 .topContainer{
     display: grid;
@@ -67,6 +96,7 @@ body{
 }
 .phone{
 position: relative;
+color: black;
 }
 .navBar{
     background-color:var(--blueColor);
@@ -105,8 +135,12 @@ position: relative;
    height: 20px;
     margin: 10px;
 }
-.stylist{
-   
+.link{
+    height: 20px;
+     margin: 10px;
+ }
+.stylistCard{
+   min-height: 850px;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -115,23 +149,43 @@ position: relative;
     border-bottom: black 2px solid;
 }
 .stylistImg{
-    max-width: 375px;
+    max-height: 300px;
     overflow: hidden;
-    max-height: 215.73px;
+    
 }
 .stylistsContainer{
-    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
    background-color:white;
    color: black;
    text-align: center;
-   
+   justify-content: center;
+   align-items: center;
   
 }
-
+.stylistCard{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 20px;
+}
+.emailBtn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
 .stylistContact{
     text-align: center;
     display: flex;
-    flex-direction: column;
+ 
     
     padding: 10px;
    height: 140px;
@@ -149,12 +203,15 @@ li{
     padding: 10px;
 }
 
-.bioTxt{
-    text-align: center;
-    margin: 30px;
-  max-width: 50vw;
-  
-    
+.bio{
+    max-height: 300px;
+    overflow: scroll;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    -ms-overflow-style: none;  /*Hide horizontal scrollbar IE and Edge */
+    scrollbar-width: none;  /*Hide horizontal scrollbar Firefox */
+    text-align: left;
+
+    width: 100%;
 }
 .contactBtn{
    border: none;
@@ -181,6 +238,31 @@ height: 25px;
     justify-content: space-evenly;
     
 }
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ 
+  }
+
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
 .reviews{
     display: flex;
     padding: 10px;  
@@ -202,8 +284,7 @@ height: 25px;
  .gallery{
     display: flex;
     flex-direction: column;
-    
-    
+    height: 400px;    
  }
 
  .review-logos{
