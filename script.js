@@ -79,8 +79,8 @@ const stylist = [
     phone: '2533891460', 
     facebook: '', 
     instagram: 'https://www.instagram.com/Crystalcoralleshair/', 
-    email: '', 
-    website: '', 
+    email: 'crystalcoralles@gmail.com', 
+    website: 'https://www.crystalcoralles.com/', 
     image: 'images/crystalCoralles.webp', 
     bio: "Crystal Coralles has been a dedicated stylist since 2006, with a passion for making people feel and look their best. With extensive training from Gene Juarez, as well as advanced training from Tony & Guy and L'Oréal Professionnel, Crystal has a wealth of knowledge in the hair industry. She has had the amazing opportunity to travel across the U.S. to participate in events and advanced training with some of the best in the industry, constantly expanding her skills and learning new techniques. While color and blondes are her specialty, Crystal loves everything about hair and takes pride in creating customized looks that enhance her clients' natural beauty. She takes the time to listen to her clients' needs and preferences, and works with them to achieve their hair goals. Crystal's passion for helping her guests feel amazing about themselves is what sets her apart, making her the perfect choice for anyone looking for a skilled and caring stylist at Chroma Salon."
     },
@@ -276,42 +276,6 @@ for(let i = 0; i < list.length; i++){
 }
 
 createStylistCard(stylist)
-
-// let slideIndex = 1;
-
-// const plusDivs = (n) => {
-//     showDivs(slideIndex += n)
-// }
-
-// const showDivs = (n) => {
-//     let i = 0;
-//     let mySlides = document.getElementsByClassName('shopImg');
-//     let slidesToShow = Math.floor(window.innerWidth / 229);
-//     let startIndex = (slideIndex - 1) % mySlides.length;
-//     let endIndex = startIndex + slidesToShow;    
-//     if (startIndex === 0 && endIndex > mySlides.length) {
-//         endIndex = mySlides.length;
-//     }    
-//     if (endIndex > mySlides.length) {
-//         endIndex = mySlides.length;
-//         startIndex = endIndex - slidesToShow;
-//     }
-//     if (n < 1){
-//         slideIndex = mySlides.length;        
-//         endIndex = mySlides.length;
-//         startIndex = endIndex - slidesToShow;
-//     }
-//     for(i = 0; i < mySlides.length; i++){
-//         if (i >= startIndex && i < endIndex) {
-//             mySlides[i].style.display = 'block';
-//         } else {
-//             mySlides[i].style.display = 'none';
-//         }
-//     }
-//     setTimeout(() => {plusDivs(1)}, 2500); // Change image every 2 seconds
-// }
-
-// showDivs(slideIndex);
 
 const gap = 16;
 

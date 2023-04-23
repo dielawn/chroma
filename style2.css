@@ -400,7 +400,9 @@ height: 25px;
   
 
 @media screen and (max-width: 800px) {
-
+    .shopImg{        
+        height: 300px;
+      }
 
 .address{
     display: none;
