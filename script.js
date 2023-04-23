@@ -277,38 +277,67 @@ for(let i = 0; i < list.length; i++){
 
 createStylistCard(stylist)
 
-let slideIndex = 1;
+// let slideIndex = 1;
 
-const plusDivs = (n) => {
-    showDivs(slideIndex += n)
-}
+// const plusDivs = (n) => {
+//     showDivs(slideIndex += n)
+// }
 
-const showDivs = (n) => {
-    let i = 0;
-    let mySlides = document.getElementsByClassName('shopImg');
-    let slidesToShow = Math.floor(window.innerWidth / 229);
-    let startIndex = (slideIndex - 1) % mySlides.length;
-    let endIndex = startIndex + slidesToShow;    
-    if (startIndex === 0 && endIndex > mySlides.length) {
-        endIndex = mySlides.length;
-    }    
-    if (endIndex > mySlides.length) {
-        endIndex = mySlides.length;
-        startIndex = endIndex - slidesToShow;
-    }
-    if (n < 1){
-        slideIndex = mySlides.length;        
-        endIndex = mySlides.length;
-        startIndex = endIndex - slidesToShow;
-    }
-    for(i = 0; i < mySlides.length; i++){
-        if (i >= startIndex && i < endIndex) {
-            mySlides[i].style.display = 'block';
-        } else {
-            mySlides[i].style.display = 'none';
-        }
-    }
-    setTimeout(() => {plusDivs(1)}, 2500); // Change image every 2 seconds
-}
+// const showDivs = (n) => {
+//     let i = 0;
+//     let mySlides = document.getElementsByClassName('shopImg');
+//     let slidesToShow = Math.floor(window.innerWidth / 229);
+//     let startIndex = (slideIndex - 1) % mySlides.length;
+//     let endIndex = startIndex + slidesToShow;    
+//     if (startIndex === 0 && endIndex > mySlides.length) {
+//         endIndex = mySlides.length;
+//     }    
+//     if (endIndex > mySlides.length) {
+//         endIndex = mySlides.length;
+//         startIndex = endIndex - slidesToShow;
+//     }
+//     if (n < 1){
+//         slideIndex = mySlides.length;        
+//         endIndex = mySlides.length;
+//         startIndex = endIndex - slidesToShow;
+//     }
+//     for(i = 0; i < mySlides.length; i++){
+//         if (i >= startIndex && i < endIndex) {
+//             mySlides[i].style.display = 'block';
+//         } else {
+//             mySlides[i].style.display = 'none';
+//         }
+//     }
+//     setTimeout(() => {plusDivs(1)}, 2500); // Change image every 2 seconds
+// }
 
-showDivs(slideIndex);
+// showDivs(slideIndex);
+
+const gap = 16;
+
+const carousel = document.getElementById("carousel"),
+  content = document.getElementById("content"),
+  next = document.getElementById("next"),
+  prev = document.getElementById("prev");
+
+next.addEventListener("click", e => {
+  carousel.scrollBy(width + gap, 0);
+  if (carousel.scrollWidth !== 0) {
+    prev.style.display = "flex";
+  }
+  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "none";
+  }
+});
+prev.addEventListener("click", e => {
+  carousel.scrollBy(-(width + gap), 0);
+  if (carousel.scrollLeft - width - gap <= 0) {
+    prev.style.display = "none";
+  }
+  if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "flex";
+  }
+});
+
+let width = carousel.offsetWidth;
+window.addEventListener("resize", e => (width = carousel.offsetWidth));

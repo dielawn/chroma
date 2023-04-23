@@ -299,6 +299,7 @@ height: 25px;
  .galleryPhotoDiv{
     display: flex;
     overflow: hidden;
+
  }
 .products{
     text-align: center;
@@ -338,6 +339,66 @@ height: 25px;
     bottom: 20px;
   right: 30px;
 }
+
+#wrapper {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  #carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carousel::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prev,
+  #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #prev {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+  
+  #next {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  #content {
+    display: grid;
+    grid-gap: 6px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+    
+  }
+  .shopImg{
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 400px;
+  }
+
+  
+
 @media screen and (max-width: 800px) {
 
 
