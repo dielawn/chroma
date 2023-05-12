@@ -95,8 +95,23 @@ body{
     font-size: .9rem;
 }
 .phone{
-position: relative;
-color: black;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 5px;
+  color: white;
+  background-color: #888;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.phone:hover{
+  background-color: #555;
+}
+.phone:active,
+.emailBtn:active{
+  background-color: #000;
 }
 .navBar{
     background-color:var(--blueColor);

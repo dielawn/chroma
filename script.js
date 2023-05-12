@@ -15,7 +15,7 @@ const stylist = [
     phone: '2536911799', 
     facebook: '', 
     instagram: 'https://www.instagram.com/jackieepp/', 
-    email: '', 
+    email: 'jackie.epperson@gmail.com', 
     website: '', 
     image: 'images/jackie-epperson.webp', 
     bio: "A talented stylist, certified balayage artist and founder of Chroma Salon. While she may no longer be the owner of the salon, her passion for the industry and dedication to her clients remain as strong as ever. As a L'Oreal Professionnel National Artist, Jackie is committed to continuous learning and education, and regularly teaches color, balayage, and styling techniques to salons across the nation. Her wealth of knowledge and experience make her one of the most sought-after stylists in the industry. As a certified L'Oreal Professionnel balayage and color artist, Jackie is skilled at creating the perfect look for each and every client. She is dedicated to delivering an experience that will leave you feeling confident and beautiful inside and out. At Chroma Salon, we value each and every client, and Jackie is here to ensure that your visit is nothing short of perfect."
@@ -165,7 +165,7 @@ for(let i = 0; i < list.length; i++){
     card.appendChild(title)
 //phone
     let phone = document.createElement('a')
-    phone.classList.add('phone', 'blkTxt')
+    phone.classList.add('phone', 'whiteTxt')
     let phoneNumber = list[i].phone
     displayedNumber = 
         phoneNumber.slice(0, 3) + '-' + 
